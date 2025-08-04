@@ -1,0 +1,50 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff0080" />
+      <stop offset="100%" stop-color="#6e00ff" />
+    </radialGradient>
+    <clipPath id="cutout">
+      <circle cx="150" cy="150" r="120"/>
+      <rect x="170" y="0" width="130" height="300" fill="white"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="298" height="298" fill="none" stroke="#8000ff" stroke-width="2"/>
+
+  <g clip-path="url(#cutout)">
+    <!-- Dots to form sphere effect -->
+    <g fill="url(#grad)">
+      <!-- You can adjust spacing, size, and distribution to enhance the spherical feel -->
+      <!-- Layered rings of dots -->
+      <!-- Ring 1 -->
+      <circle cx="150" cy="60" r="6"/>
+      <circle cx="120" cy="70" r="5"/>
+      <circle cx="180" cy="70" r="5"/>
+
+      <!-- Ring 2 -->
+      <circle cx="100" cy="100" r="7"/>
+      <circle cx="130" cy="100" r="6"/>
+      <circle cx="160" cy="100" r="6"/>
+      <circle cx="190" cy="100" r="7"/>
+
+      <!-- Ring 3 -->
+      <circle cx="85" cy="140" r="8"/>
+      <circle cx="115" cy="140" r="7"/>
+      <circle cx="145" cy="140" r="6"/>
+      <circle cx="175" cy="140" r="7"/>
+      <circle cx="205" cy="140" r="8"/>
+
+      <!-- Ring 4 -->
+      <circle cx="100" cy="180" r="7"/>
+      <circle cx="130" cy="180" r="6"/>
+      <circle cx="160" cy="180" r="6"/>
+      <circle cx="190" cy="180" r="7"/>
+
+      <!-- Ring 5 -->
+      <circle cx="120" cy="210" r="5"/>
+      <circle cx="150" cy="220" r="6"/>
+      <circle cx="180" cy="210" r="5"/>
+    </g>
+  </g>
+</svg>

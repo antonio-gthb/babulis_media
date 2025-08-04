@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 313 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-416.254,-227.592)">
+        <g transform="matrix(1,0,0,1,-131.359,-27.7437)">
+            <g transform="matrix(1,0,0,1.1,0,-29.4003)">
+                <text x="552.606px" y="294.003px" style="font-family:'Alta_caption', 'Alta';font-size:48px;fill:white;">B<tspan x="578.142px 610.446px 635.982px 664.926px 686.094px 696.03px " y="294.003px 294.003px 294.003px 294.003px 294.003px 294.003px ">ABULIS</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1.1,0,-29.4003)">
+                <g transform="matrix(48,0,0,48,856.062,294.003)">
+                </g>
+                <text x="718.638px" y="294.003px" style="font-family:'Alta_caption', 'Alta';font-size:48px;fill:rgb(232,165,35);">M<tspan x="759.054px 780.366px 814.062px 823.998px " y="294.003px 294.003px 294.003px 294.003px ">EDIA</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1.01388,0,0,0.460286,-5.25031,168.316)">
+            <rect x="416.471" y="130.411" width="306.663" height="95.656" style="fill:none;stroke:white;stroke-width:1.91px;"/>
+        </g>
+    </g>
+</svg>
