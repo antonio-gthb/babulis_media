@@ -20,32 +20,38 @@
 
   function showBanner() {
     const banner = document.createElement('div');
-    banner.id = 'cookie-banner';
-    banner.className = 'position-fixed bottom-0 start-0 end-0 bg-dark text-white p-3 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center shadow';
-    banner.style.zIndex = '1050';
+    banner.className = 'cookie-card';
 
     banner.innerHTML = `
-      <div class="me-md-3 mb-2 mb-md-0 small">
-        We use cookies to improve your experience. You can accept or decline tracking.
-        See our <a href="/pages/privacy.html" class="text-white text-decoration-underline" target="_blank">Privacy Policy</a>.
-      </div>
-      <div class="d-flex gap-2">
-        <button id="accept-cookies" class="btn btn-sm btn-success">Accept</button>
-        <button id="decline-cookies" class="btn btn-sm btn-secondary">Decline</button>
+      <h4>Cookie Preferences</h4>
+      <p>
+        We use cookies to enhance your browsing experience and analyze our traffic. 
+        <a href="/pages/privacy.html" style="color: var(--primary-color); text-decoration: underline;">Privacy Policy</a>
+      </p>
+      <div class="cookie-btn-group">
+        <button id="decline-cookies" class="btn-cookie-decline">Decline</button>
+        <button id="accept-cookies" class="btn-cookie-accept">Accept</button>
       </div>
     `;
 
     document.body.appendChild(banner);
 
+    // Trigger animation after a small delay
+    setTimeout(() => {
+      banner.classList.add('show');
+    }, 100);
+
     document.getElementById('accept-cookies').addEventListener('click', function () {
       localStorage.setItem('cookieConsent', 'accepted');
-      banner.remove();
+      banner.classList.remove('show');
+      setTimeout(() => banner.remove(), 500); // Wait for animation
       runTrackingScripts();
     });
 
     document.getElementById('decline-cookies').addEventListener('click', function () {
       localStorage.setItem('cookieConsent', 'declined');
-      banner.remove();
+      banner.classList.remove('show');
+      setTimeout(() => banner.remove(), 500); // Wait for animation
     });
   }
 
@@ -54,7 +60,8 @@
     if (consent === 'accepted') {
       runTrackingScripts();
     } else if (!consent) {
-      showBanner();
+      // Show banner after a short delay for better UX
+      setTimeout(showBanner, 1000);
     }
   });
 })();
