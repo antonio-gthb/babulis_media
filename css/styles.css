@@ -46,27 +46,40 @@ html {
   box-shadow: var(--shadow-sm);
 }
 
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* Bigger h1 and p ONLY in the hero section */
 .hero-section h1 {
-  font-size: 3rem;
-  font-family: 'Alta Caption', sans-serif;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-section p {
   font-size: 1rem;
   /* default (mobile) */
-  font-family: 'Alta Regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
 }
 
 @media (min-width: 992px) {
   .hero-section p {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
     line-height: 1.6;
   }
 
   .hero-section h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -103,39 +116,20 @@ html {
 
 
 
-@font-face {
-  font-family: 'Alta Caption';
-  src: url('/fonts/Alta_caption.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Alta Light';
-  src: url('/fonts/Alta_light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Alta Regular';
-  src: url('/fonts/Alta_regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .hero-title {
-  font-family: 'Alta Caption', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: 'Alta Regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Default size for navbar links (mobile) */
 .navbar .nav-link span {
-  font-family: 'Alta Regular', sans-serif;
-  font-size: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   font-weight: 500;
   color: inherit;
 }
@@ -143,19 +137,19 @@ body {
 /* Larger font size on desktop (min-width 992px) */
 @media (min-width: 992px) {
   .navbar .nav-link span {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
 p {
-  font-family: 'Alta Regular', sans-serif;
-  font-size: 1.125rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   /* 18px base size */
   line-height: 1.6;
 }
 
 h1 {
-  font-family: 'Alta Caption', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* About Section Banner (full-width background) */
@@ -176,26 +170,31 @@ h1 {
 }
 
 .about-content h2 {
-  font-family: 'Alta Caption', sans-serif;
-  font-size: 2.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .about-content p {
-  font-family: 'Alta Regular', sans-serif;
-  font-size: 1.125rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
 #contact h2 {
-  font-family: 'Alta Caption', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
 }
 
 #contact p {
-  font-family: 'Alta Regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+#contact .btn-babulis {
+  min-width: 340px;
+  text-align: center;
 }
 
 video {
@@ -369,13 +368,13 @@ section {
 }
 
 footer {
-  background-color: var(--bg-dark) !important;
-  color: var(--text-light) !important;
+  background-color: var(--bg-light) !important;
+  color: var(--text-dark) !important;
   border-top: none;
 }
 
 footer a {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: var(--primary-color) !important;
   transition: color var(--transition-fast);
 }
 
@@ -383,9 +382,7 @@ footer a:hover {
   color: var(--accent-color) !important;
 }
 
-footer .text-dark {
-  color: var(--text-light) !important;
-}
+
 
 /* Navbar Glassmorphism */
 .navbar {
@@ -438,7 +435,7 @@ footer .text-dark {
 }
 
 .cookie-card h4 {
-  font-family: 'Alta Caption', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--text-dark);
